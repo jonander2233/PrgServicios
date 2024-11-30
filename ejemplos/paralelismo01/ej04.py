@@ -16,6 +16,7 @@ def tareaUno():
   return
 
 Done = False
+
 hilos = list()
 for i in range(50):
   t = threading.Thread(target=tareaUno)
