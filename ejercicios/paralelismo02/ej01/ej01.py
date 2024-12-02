@@ -11,7 +11,7 @@ class MiScraping(threading.Thread):
     def run(self):
         response = requests.get(self.url)
         soup = BeautifulSoup(response.text,"html.parser")
-        self.links = [a['href'] for a in soup.find_all('a', href=True) if re.match(r'http[s]?://', a['href'])]
+        self.links = [a['href'] for a in soup.find_all('a', href=True)]
     def get_links(self):
         return self.links
 
